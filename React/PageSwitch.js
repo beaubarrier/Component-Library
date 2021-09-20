@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import Navbar from '../components/Navbar.js'
-import Portfolio from '../components/Page1';
-import MyStory from '../components/Page2';
-import Default from '../components/Page3';
+import Page1 from '../components/Page1';
+import Page2 from '../components/Page2';
+import Page3 from '../components/Page3';
 
 // This will create a way to switch components on a page.
 export default function Main() {
@@ -10,13 +10,13 @@ export default function Main() {
 
     const renderPage = () => {
         if (currentPage === 'Page1') {
-            return <Portfolio />;
+            return <Page1 />;
         }
         if (currentPage === 'Page2') {
-            return <MyStory />;
+            return <Page2 />;
         }
         if (currentPage === 'Page3') {
-            return <Default />;
+            return <Page3 />;
         }
     }
     const handlePageChange = (page) => setPage(page);
